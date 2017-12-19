@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vlcplayer.VlcControllerView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/controllerView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.vlcplayer.VlcVideoView
+        android:id="@+id/videoView"
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/loading_LinearLayout"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/loading_image"
+            android:background="@drawable/ic_launcher_vplayer"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="很努力的加载中~~~"
+            android:layout_marginTop="10dp"
+            android:id="@+id/loading_tv" />
+    </LinearLayout>
+
+</com.vlcplayer.VlcControllerView>

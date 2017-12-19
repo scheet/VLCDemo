@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mediacontroller_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/mediacontroller_seekbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/mediacontroller_bg"
+        >
+
+        <TextView
+            android:id="@+id/time_current"
+            style="@style/MediaController_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@+id/mediacontroller_time"
+            style="@style/MediaController_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25dp" />
+
+        <SeekBar
+            android:id="@+id/mediacontroller_progress"
+            style="@style/MediaController_SeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/mediacontroller_time"
+            android:layout_toRightOf="@id/time_current"
+            android:focusable="true"
+            android:max="1000" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mediacontroller_seekbar_layout"
+        android:gravity="center_horizontal"
+        android:background="@color/mediacontroller_bg"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mediacontroller_snapshot"
+            android:visibility="gone"
+            android:background="@drawable/mediacontroller_snapshot"
+            android:layout_centerVertical="true"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mediacontroller_prev"
+            android:background="@drawable/mediacontroller_previous"
+            android:layout_toRightOf="@+id/mediacontroller_snapshot"
+            android:layout_marginLeft="25dp"
+            android:layout_centerVertical="true"
+            />
+
+        <ImageButton
+            android:id="@+id/mediacontroller_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mediacontroller_button"
+            android:contentDescription="@string/mediacontroller_play_pause"
+            android:src="@drawable/mediacontroller_pause"
+            android:layout_toRightOf="@+id/mediacontroller_prev"
+            android:layout_marginLeft="25dp"
+            android:layout_centerVertical="true"
+            />
+        <ImageView
+            android:id="@+id/mediacontroller_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mediacontroller_next"
+            android:layout_toRightOf="@+id/mediacontroller_pause"
+            android:layout_marginLeft="25dp"
+            android:layout_centerVertical="true"
+            />
+        <ImageView
+            android:id="@+id/mediacontroller_fullscreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mediacontroller_screen_fit"
+            android:layout_toRightOf="@+id/mediacontroller_next"
+            android:layout_marginLeft="25dp"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+</RelativeLayout>
